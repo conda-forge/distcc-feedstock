@@ -1,4 +1,4 @@
-{% set version = "3.3.5" %}
+{% set version = "3.4" %}
 
 package:
   name: distcc
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/distcc/distcc/releases/download/v{{ version }}/distcc-{{ version }}.tar.gz
-  sha256: 7a8e45a3a2601b7d5805c7d5b24918e3ad84b6b5cc9153133f432fdcc6dce518
+  sha256: 2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d
 
 build:
   number: 0
-  skip: True  # [py<31]
-  skip: True  # [not unix]
+  skip: true  # [py<31]
+  skip: true  # [not unix]
 
 requirements:
   build:
