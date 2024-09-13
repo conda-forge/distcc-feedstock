@@ -7,20 +7,24 @@ package:
 source:
   url: https://github.com/distcc/distcc/releases/download/v{{ version }}/distcc-{{ version }}.tar.gz
   sha256: 2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d
+  patches:
+    - 76873f8858bf5f32bda170fcdc1dfebb69de0e4b.patch
 
 build:
-  number: 3
+  number: 4
   skip: true  # [py<31]
   skip: true  # [not unix]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - autoconf
     - automake
     - python
+    - setuptools
   run:
     - python
 
