@@ -11,7 +11,7 @@ source:
     - 76873f8858bf5f32bda170fcdc1dfebb69de0e4b.patch
 
 build:
-  number: 4
+  number: 5
   skip: true  # [py<31]
   skip: true  # [not unix]
 
